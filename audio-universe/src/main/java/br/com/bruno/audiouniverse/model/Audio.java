@@ -1,12 +1,14 @@
 package br.com.bruno.audiouniverse.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Audio {
 
     private String title;
-    private String duration;
     private int fullReproduction;
     private int likes;
-    private double classification;
+    private int classification;
 
     public String getTitle() {
         return title;
@@ -14,14 +16,6 @@ public class Audio {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
     }
 
     public int getFullReproduction() {
@@ -32,7 +26,15 @@ public class Audio {
         return likes;
     }
 
-    public double getClassification() {
+    public int getClassification() {
         return classification;
+    }
+
+    public void like() {
+        likes++;
+    }
+
+    public void reproduce() {
+        fullReproduction++;
     }
 }
