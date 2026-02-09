@@ -4,8 +4,15 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Principal {
     public static void main(String[] args) {
+
+        List<Filme> filmes = new ArrayList<>();
+
         Filme meuFilme = new Filme();
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
@@ -50,5 +57,15 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        Filme filmeDoBruno = new Filme();
+        filmeDoBruno.setNome("Titanic");
+        filmeDoBruno.setAnoDeLancamento(2000);
+
+        filmes.add(meuFilme);
+        filmes.add(outroFilme);
+        filmes.add(filmeDoBruno);
+
+        System.out.println(filmes);
     }
 }
